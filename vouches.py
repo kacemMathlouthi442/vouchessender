@@ -13,13 +13,8 @@ services = [
     'Facebook', 'WhatsApp', 'Instagram'
 ]
 
-# Load token
-TOKEN = os.environ.get('token')
-if not TOKEN:
-    print("❌ Bot token not found in environment!")
-    exit()
 
-bot = Bot(token=TOKEN)
+bot = Bot(os.environ.get('token'))
 lengt = [4,6,8]
 async def main_loop():
     while True:
@@ -31,14 +26,14 @@ async def main_loop():
                 f"➖➖➖➖➖➖\n"
                 f"╭  Service Name ➣ <b>{service}</b>\n"
                 f"⭐ OTP ➣ <code>{otp}</code> ✅\n"
-                f"╰  Capture By: **********\n"
+                f"╰  Capture By: -----------\n"
                 f"🤖 <a href='https://t.me/AORUS_OTP_bot'>BOT</a>"
             )
             await bot.send_message(chat_id=-1002662428684, text=msg1, parse_mode='HTML')
         except Exception as e:
             print(f"❌ Error sending to channel 1: {e}")
 
-        await asyncio.sleep(randint(600, 1600))
+        await asyncio.sleep(randint(3, 9))
 
 
 if __name__ == "__main__":
