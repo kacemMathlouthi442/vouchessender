@@ -38,7 +38,7 @@ async def main_loop():
         except Exception as e:
             print(f"❌ Error sending to channel 1: {e}")
 
-        await asyncio.sleep(randint(300, 900))
+        await asyncio.sleep(randint(600, 1600))
 
 
 if __name__ == "__main__":
