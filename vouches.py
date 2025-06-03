@@ -29,7 +29,7 @@ async def main_loop():
         )
         await bot.send_message(chat_id=-1002662428684, text=msg1, parse_mode='HTML')
 
-        await asyncio.sleep(randint(600, 1300))
+        await asyncio.sleep(randint(10800, 28800))
 
 
 if __name__ == "__main__":
