@@ -15,10 +15,9 @@ services = [
 
 
 bot = Bot(os.environ.get('token'))
-lengt = [4,6,8]
 async def main_loop():
     while True:
-        otp = ''.join([str(randint(0, 9)) for _ in range(lengt[randint(0,2)])])
+        otp = ''.join([str(randint(0, 9)) for _ in range(6)])
         service = services[randint(0, len(services)-1)]
         msg1 = (
             f"<b>📲 AORUS OTP 📲 ┃ VOUCHES </b>\n"
